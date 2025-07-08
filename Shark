@@ -209,10 +209,6 @@ createScriptButton(miscPage, "Infinite Yield", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 end)
 
-createScriptButton(miscPage, "Dex Explorer", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/peyton2465/Dex/master/out.lua"))()
-end)
-
 -- === SETTINGS BUTTONS ===
 createScriptButton(settingsPage, "xoá hack", function()
     gui:Destroy()
