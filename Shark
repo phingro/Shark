@@ -1,0 +1,188 @@
+-- LocalScript (place inside StarterPlayerScripts or StarterGui)
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer
+local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+gui.Name = "ScriptHub"
+
+-- Create Main Frame
+local frame = Instance.new("Frame", gui)
+frame.Size = UDim2.new(0, 300, 0, 400)
+frame.Position = UDim2.new(0.5, -150, 0.5, -200)
+frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+
+-- Make Frame Draggable (Modern Method)
+local UserInputService = game:GetService("UserInputService")
+local dragging = false
+local dragInput, dragStart, startPos
+
+frame.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        dragging = true
+        dragStart = input.Position
+        startPos = frame.Position
+
+        input.Changed:Connect(function()
+            if input.UserInputState == Enum.UserInputState.End then
+                dragging = false
+            end
+        end)
+    end
+end)
+
+frame.InputChanged:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.MouseMovement then
+        dragInput = input
+    end
+end)
+
+UserInputService.InputChanged:Connect(function(input)
+    if input == dragInput and dragging then
+        local delta = input.Position - dragStart
+        frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+            startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+    end
+end)
+
+-- Title
+local title = Instance.new("TextLabel", frame)
+title.Size = UDim2.new(1, 0, 0, 40)
+title.Text = "Script Hub"
+title.TextColor3 = Color3.new(1, 1, 1)
+title.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+title.Font = Enum.Font.SourceSansBold
+title.TextSize = 24
+
+-- Helper to create buttons
+local buttonY = 50
+local function createScriptButton(name, scriptFunc)
+    local btn = Instance.new("TextButton", frame)
+    btn.Size = UDim2.new(1, -20, 0, 40)
+    btn.Position = UDim2.new(0, 10, 0, buttonY)
+    btn.Text = name
+    btn.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+    btn.TextColor3 = Color3.new(1, 1, 1)
+    btn.Font = Enum.Font.SourceSans
+    btn.TextSize = 20
+    btn.MouseButton1Click:Connect(scriptFunc)
+    buttonY = buttonY + 45
+end
+
+-- ESP Toggle Variables
+local espEnabled = false
+local espConnections = {}
+
+-- Add ESP to a player
+local function addESP(player)
+    if player == Players.LocalPlayer then return end
+
+    local function onCharacterAdded(character)
+        local head = character:WaitForChild("Head", 10)
+        local rootPart = character:WaitForChild("HumanoidRootPart", 10)
+
+        if head and not head:FindFirstChild("ESP_Name") then
+            local billboard = Instance.new("BillboardGui")
+            billboard.Name = "ESP_Name"
+            billboard.Adornee = head
+            billboard.Size = UDim2.new(0, 200, 0, 50)
+            billboard.StudsOffset = Vector3.new(0, 2, 0)
+            billboard.AlwaysOnTop = true
+
+            local nameLabel = Instance.new("TextLabel")
+            nameLabel.Size = UDim2.new(1, 0, 1, 0)
+            nameLabel.BackgroundTransparency = 1
+            nameLabel.Text = player.Name
+            nameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+            nameLabel.TextStrokeTransparency = 0.5
+            nameLabel.TextScaled = true
+            nameLabel.Parent = billboard
+
+            billboard.Parent = head
+        end
+
+        if rootPart and not rootPart:FindFirstChild("ESP_Box") then
+            local box = Instance.new("BoxHandleAdornment")
+            box.Name = "ESP_Box"
+            box.Adornee = rootPart
+            box.Size = Vector3.new(4, 6, 2)
+            box.AlwaysOnTop = true
+            box.ZIndex = 0
+            box.Transparency = 0.7
+            box.Color3 = Color3.new(1, 0, 0)
+            box.Parent = rootPart
+        end
+    end
+
+    if player.Character then
+        onCharacterAdded(player.Character)
+    end
+
+    local conn = player.CharacterAdded:Connect(onCharacterAdded)
+    table.insert(espConnections, conn)
+end
+
+-- Remove ESP elements from all players
+local function removeESP()
+    for _, p in ipairs(Players:GetPlayers()) do
+        if p ~= player and p.Character then
+            local head = p.Character:FindFirstChild("Head")
+            local root = p.Character:FindFirstChild("HumanoidRootPart")
+            if head and head:FindFirstChild("ESP_Name") then
+                head.ESP_Name:Destroy()
+            end
+            if root and root:FindFirstChild("ESP_Box") then
+                root.ESP_Box:Destroy()
+            end
+        end
+    end
+    for _, conn in pairs(espConnections) do
+        if conn and conn.Disconnect then
+            conn:Disconnect()
+        end
+    end
+    espConnections = {}
+end
+
+-- Toggle ESP
+local function toggleESP()
+    espEnabled = not espEnabled
+    if espEnabled then
+        for _, p in pairs(Players:GetPlayers()) do
+            addESP(p)
+        end
+        table.insert(espConnections, Players.PlayerAdded:Connect(addESP))
+
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "ESP ON",
+            Text = "Được tạo bởi cá",
+            Button1 = "OK",
+            Duration = 4
+        })
+    else
+        removeESP()
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "ESP OFF",
+            Text = "Được tạo bởi cá",
+            Button1 = "OK",
+            Duration = 4
+        })
+    end
+end
+
+-- BUTTONS
+createScriptButton("Speed Boost", function()
+    local char = player.Character or player.CharacterAdded:Wait()
+    local humanoid = char:FindFirstChildOfClass("Humanoid")
+    if humanoid then
+        humanoid.WalkSpeed = 50
+    end
+end)
+
+createScriptButton("Jump Boost", function()
+    local char = player.Character or player.CharacterAdded:Wait()
+    local humanoid = char:FindFirstChildOfClass("Humanoid")
+    if humanoid then
+        humanoid.JumpPower = 100
+    end
+end)
+
+createScriptButton("Toggle ESP", toggleESP)
