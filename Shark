@@ -1,11 +1,35 @@
+-- File
+local HttpService = game:GetService("HttpService")
+local SaveFile = "script_config.json"
+
+local function saveData(data)
+    pcall(function()
+        writefile(SaveFile, HttpService:JSONEncode(data))
+    end)
+end
+
+local function loadData()
+    if isfile(SaveFile) then
+        local success, result = pcall(function()
+            return HttpService:JSONDecode(readfile(SaveFile))
+        end)
+        if success then return result end
+    end
+    return {}
+end
+
+local config = loadData()
+local espEnabled = config.esp or false
+local autoSave = config.autoSave ~= false -- default true
+
+-- Gui
 local gui = Instance.new("ScreenGui")
 gui.Name = "ScriptHub"
 gui.ResetOnSpawn = false
 gui.Parent = game.CoreGui
 
--- Toggle button (for mobile + PC)
 local toggleButton = Instance.new("TextButton")
-toggleButton.Size = UDim2.new(0, 100, 0, 40)
+toggleButton.Size = UDim2.new(0, 80, 0, 30)
 toggleButton.Position = UDim2.new(0, 10, 0, 10)
 toggleButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 toggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -13,10 +37,9 @@ toggleButton.Font = Enum.Font.Gotham
 toggleButton.TextSize = 14
 toggleButton.Parent = gui
 
--- Main Hub Frame
 local frame = Instance.new("Frame")
-frame.Size = UDim2.new(0, 320, 0, 440)
-frame.Position = UDim2.new(0.5, -160, 0.5, -220)
+frame.Size = UDim2.new(0, 240, 0, 300)
+frame.Position = UDim2.new(0.5, -120, 0.5, -150)
 frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 frame.BorderSizePixel = 0
 frame.Active = true
@@ -24,251 +47,250 @@ frame.Draggable = true
 frame.Visible = true
 frame.Parent = gui
 
--- Title
 local title = Instance.new("TextLabel")
 title.Text = "Script nhà làm"
-title.Size = UDim2.new(1, 0, 0, 40)
+title.Size = UDim2.new(1, 0, 0, 35)
 title.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 title.TextColor3 = Color3.fromRGB(255, 255, 255)
 title.Font = Enum.Font.GothamBold
-title.TextSize = 20
+title.TextSize = 18
 title.Parent = frame
 
--- Tab Buttons
 local tabBar = Instance.new("Frame")
 tabBar.Size = UDim2.new(1, 0, 0, 30)
-tabBar.Position = UDim2.new(0, 0, 0, 40)
+tabBar.Position = UDim2.new(0, 0, 0, 35)
 tabBar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
 tabBar.Parent = frame
 
 local tabLayout = Instance.new("UIListLayout", tabBar)
 tabLayout.FillDirection = Enum.FillDirection.Horizontal
 tabLayout.SortOrder = Enum.SortOrder.LayoutOrder
+tabLayout.Padding = UDim.new(0, 2)
 
-local tabs = {}
-local pages = {}
+local tabs, pages = {}, {}
 
 local function createTab(name)
-	local tab = Instance.new("TextButton")
-	tab.Text = name
-	tab.Size = UDim2.new(0, 106, 1, 0)
-	tab.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-	tab.TextColor3 = Color3.fromRGB(255, 255, 255)
-	tab.Font = Enum.Font.Gotham
-	tab.TextSize = 14
-	tab.Parent = tabBar
-	tabs[name] = tab
+    local tab = Instance.new("TextButton")
+    tab.Text = name
+    tab.Size = UDim2.new(1/3, -2, 1, 0)
+    tab.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+    tab.TextColor3 = Color3.fromRGB(255, 255, 255)
+    tab.Font = Enum.Font.Gotham
+    tab.TextSize = 14
+    tab.Parent = tabBar
+    tabs[name] = tab
 
-	local page = Instance.new("Frame")
-	page.Name = name .. "Page"
-	page.Size = UDim2.new(1, 0, 1, -70)
-	page.Position = UDim2.new(0, 0, 0, 70)
-	page.BackgroundTransparency = 1
-	page.Visible = false
-	page.Parent = frame
-	pages[name] = page
+    local page = Instance.new("Frame")
+    page.Name = name .. "Page"
+    page.Size = UDim2.new(1, 0, 1, -65)
+    page.Position = UDim2.new(0, 0, 0, 65)
+    page.BackgroundTransparency = 1
+    page.Visible = false
+    page.Parent = frame
+    pages[name] = page
 
-	local layout = Instance.new("UIListLayout")
-	layout.Padding = UDim.new(0, 5)
-	layout.FillDirection = Enum.FillDirection.Vertical
-	layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-	layout.SortOrder = Enum.SortOrder.LayoutOrder
-	layout.Parent = page
+    local layout = Instance.new("UIListLayout", page)
+    layout.Padding = UDim.new(0, 5)
+    layout.FillDirection = Enum.FillDirection.Vertical
+    layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+    layout.SortOrder = Enum.SortOrder.LayoutOrder
 
-	tab.MouseButton1Click:Connect(function()
-		for _, p in pairs(pages) do p.Visible = false end
-		page.Visible = true
-	end)
+    tab.MouseButton1Click:Connect(function()
+        for _, p in pairs(pages) do p.Visible = false end
+        page.Visible = true
+    end)
 
-	return page
+    return page
 end
 
 local function createScriptButton(parent, name, callback)
-	local button = Instance.new("TextButton")
-	button.Text = name
-	button.Size = UDim2.new(0.9, 0, 0, 40)
-	button.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-	button.TextColor3 = Color3.fromRGB(255, 255, 255)
-	button.Font = Enum.Font.Gotham
-	button.TextSize = 16
-	button.MouseButton1Click:Connect(callback)
-	button.Parent = parent
+    local button = Instance.new("TextButton")
+    button.Text = name
+    button.Size = UDim2.new(0.95, 0, 0, 35)
+    button.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+    button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    button.Font = Enum.Font.Gotham
+    button.TextSize = 14
+    button.Parent = parent
+    button.MouseButton1Click:Connect(callback)
 end
 
--- Create pages
-local mainPage = createTab("Main")
-local miscPage = createTab("Misc")
-local settingsPage = createTab("Settings")
+local function createToggle(parent, name, default, callback)
+    local holder = Instance.new("Frame")
+    holder.Size = UDim2.new(0.95, 0, 0, 35)
+    holder.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+    holder.BorderSizePixel = 0
+    holder.Parent = parent
 
--- Default visible tab
-pages["Main"].Visible = true
+    local label = Instance.new("TextLabel")
+    label.Text = name
+    label.Size = UDim2.new(0.6, 0, 1, 0)
+    label.BackgroundTransparency = 1
+    label.TextColor3 = Color3.fromRGB(255, 255, 255)
+    label.Font = Enum.Font.Gotham
+    label.TextSize = 14
+    label.TextXAlignment = Enum.TextXAlignment.Left
+    label.Parent = holder
 
--- === MAIN BUTTONS ===
+    local toggle = Instance.new("TextButton")
+    toggle.Size = UDim2.new(0, 40, 0, 20)
+    toggle.Position = UDim2.new(1, -50, 0.5, -10)
+    toggle.BackgroundColor3 = default and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(80, 80, 80)
+    toggle.BorderSizePixel = 0
+    toggle.Text = ""
+    toggle.Parent = holder
 
--- ESP system
-local espEnabled = false
+    local circle = Instance.new("Frame")
+    circle.Size = UDim2.new(0, 16, 0, 16)
+    circle.Position = default and UDim2.new(0, 22, 0.5, -8) or UDim2.new(0, 2, 0.5, -8)
+    circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    circle.BorderSizePixel = 0
+    circle.Parent = toggle
+
+    Instance.new("UICorner", toggle).CornerRadius = UDim.new(1, 0)
+    Instance.new("UICorner", circle).CornerRadius = UDim.new(1, 0)
+
+    local state = default
+    local function update()
+        toggle.BackgroundColor3 = state and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(80, 80, 80)
+        circle:TweenPosition(state and UDim2.new(0, 22, 0.5, -8) or UDim2.new(0, 2, 0.5, -8), "Out", "Quad", 0.2, true)
+        if callback then callback(state) end
+    end
+
+    toggle.MouseButton1Click:Connect(function()
+        state = not state
+        update()
+    end)
+
+    update()
+end
+
+-- Esp
 local espConnections = {}
 
 local function removeESP(player)
-	if player.Character then
-		local head = player.Character:FindFirstChild("Head")
-		if head then
-			local existing = head:FindFirstChild("ESP_Name")
-			if existing then existing:Destroy() end
-		end
-
-		local root = player.Character:FindFirstChild("HumanoidRootPart")
-		if root then
-			local box = root:FindFirstChild("ESP_Box")
-			if box then box:Destroy() end
-		end
-	end
+    if player.Character then
+        local head = player.Character:FindFirstChild("Head")
+        if head then local gui = head:FindFirstChild("ESP_Name") if gui then gui:Destroy() end end
+        local root = player.Character:FindFirstChild("HumanoidRootPart")
+        if root then local box = root:FindFirstChild("ESP_Box") if box then box:Destroy() end end
+    end
 end
 
 local function createESP(player)
-	if player == game.Players.LocalPlayer then return end
-
-	local function onCharacterAdded(character)
-		if not espEnabled then return end
-		local head = character:WaitForChild("Head", 10)
-		local rootPart = character:WaitForChild("HumanoidRootPart", 10)
-
-		if head then
-			local billboard = Instance.new("BillboardGui")
-			billboard.Name = "ESP_Name"
-			billboard.Adornee = head
-			billboard.Size = UDim2.new(0, 200, 0, 50)
-			billboard.StudsOffset = Vector3.new(0, 2, 0)
-			billboard.AlwaysOnTop = true
-
-			local nameLabel = Instance.new("TextLabel")
-			nameLabel.Size = UDim2.new(1, 0, 1, 0)
-			nameLabel.BackgroundTransparency = 1
-			nameLabel.Text = player.Name
-			nameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-			nameLabel.TextStrokeTransparency = 0.5
-			nameLabel.TextScaled = true
-			nameLabel.Parent = billboard
-
-			billboard.Parent = head
-		end
-
-		if rootPart then
-			local box = Instance.new("BoxHandleAdornment")
-			box.Name = "ESP_Box"
-			box.Adornee = rootPart
-			box.Size = Vector3.new(4, 6, 2)
-			box.AlwaysOnTop = true
-			box.ZIndex = 0
-			box.Transparency = 0.7
-			box.Color3 = Color3.new(1, 0, 0)
-			box.Parent = rootPart
-		end
-	end
-
-	if player.Character then
-		onCharacterAdded(player.Character)
-	end
-
-	local conn = player.CharacterAdded:Connect(onCharacterAdded)
-	table.insert(espConnections, conn)
+    if player == game.Players.LocalPlayer then return end
+    local function onCharacterAdded(character)
+        if not espEnabled then return end
+        local head = character:WaitForChild("Head", 10)
+        local rootPart = character:WaitForChild("HumanoidRootPart", 10)
+        if head then
+            local billboard = Instance.new("BillboardGui")
+            billboard.Name = "ESP_Name"
+            billboard.Adornee = head
+            billboard.Size = UDim2.new(0, 200, 0, 50)
+            billboard.StudsOffset = Vector3.new(0, 2, 0)
+            billboard.AlwaysOnTop = true
+            local nameLabel = Instance.new("TextLabel")
+            nameLabel.Size = UDim2.new(1, 0, 1, 0)
+            nameLabel.BackgroundTransparency = 1
+            nameLabel.Text = player.Name
+            nameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+            nameLabel.TextStrokeTransparency = 0.5
+            nameLabel.TextScaled = true
+            nameLabel.Parent = billboard
+            billboard.Parent = head
+        end
+        if rootPart then
+            local box = Instance.new("BoxHandleAdornment")
+            box.Name = "ESP_Box"
+            box.Adornee = rootPart
+            box.Size = Vector3.new(4, 6, 2)
+            box.AlwaysOnTop = true
+            box.ZIndex = 0
+            box.Transparency = 0.7
+            box.Color3 = Color3.new(1, 0, 0)
+            box.Parent = rootPart
+        end
+    end
+    if player.Character then onCharacterAdded(player.Character) end
+    table.insert(espConnections, player.CharacterAdded:Connect(onCharacterAdded))
 end
 
 local function enableESP()
-	for _, p in ipairs(game.Players:GetPlayers()) do
-		createESP(p)
-	end
-	table.insert(espConnections, game.Players.PlayerAdded:Connect(createESP))
+    for _, p in ipairs(game.Players:GetPlayers()) do createESP(p) end
+    table.insert(espConnections, game.Players.PlayerAdded:Connect(createESP))
 end
 
 local function disableESP()
-	for _, p in ipairs(game.Players:GetPlayers()) do
-		removeESP(p)
-	end
-	for _, conn in ipairs(espConnections) do
-		conn:Disconnect()
-	end
-	espConnections = {}
+    for _, p in ipairs(game.Players:GetPlayers()) do removeESP(p) end
+    for _, conn in ipairs(espConnections) do conn:Disconnect() end
+    espConnections = {}
 end
 
--- ESP Button (with toggle style)
-local espButton
+-- === PAGES ===
+local mainPage = createTab("Main")
+local miscPage = createTab("Misc")
+local settingsPage = createTab("Settings")
+pages["Main"].Visible = true
 
-local function updateESPButton()
-	if espEnabled then
-		espButton.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
-		espButton.Text = "Tắt Esp"
-	else
-		espButton.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
-		espButton.Text = "Bật Esp"
-	end
-end
-
-espButton = Instance.new("TextButton")
-espButton.Size = UDim2.new(0.9, 0, 0, 40)
-espButton.Position = UDim2.new(0.05, 0, 0, 0)
-espButton.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-espButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-espButton.Font = Enum.Font.Gotham
-espButton.TextSize = 16
-espButton.Parent = mainPage
-
-espButton.MouseButton1Click:Connect(function()
-	espEnabled = not espEnabled
-	if espEnabled then
-		enableESP()
-		print("ESP Enabled")
-	else
-		disableESP()
-		print("ESP Disabled")
-	end
-	updateESPButton()
+-- === Main Toggle
+createToggle(mainPage, "esp người chơi", espEnabled, function(state)
+    espEnabled = state
+    config.esp = state
+    if autoSave then saveData(config) end
+    if state then enableESP() else disableESP() end
 end)
 
-updateESPButton()
-
--- === MISC BUTTONS ===
-
+-- === Misc Page
 createScriptButton(miscPage, "Infinite Yield", function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 end)
 
--- === SETTINGS BUTTONS ===
-createScriptButton(settingsPage, "xoá hack", function()
-	gui:Destroy()
+-- === Settings Page
+createToggle(settingsPage, "Tự động lưu", autoSave, function(state)
+    autoSave = state
+    config.autoSave = state
+    saveData(config)
 end)
 
--- === TOGGLE BUTTON LOGIC (PC + MOBILE) ===
+createScriptButton(settingsPage, "Xoá Hack", function()
+    disableESP()
+    gui:Destroy()
+end)
+
+-- === GUI Toggle Logic ===
 local UIS = game:GetService("UserInputService")
 
 local function updateToggleButton()
-	if frame.Visible then
-		toggleButton.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
-		toggleButton.Text = "Tắt"
-	else
-		toggleButton.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
-		toggleButton.Text = "Bật"
-	end
+    if frame.Visible then
+        toggleButton.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+        toggleButton.Text = "Tắt"
+    else
+        toggleButton.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+        toggleButton.Text = "Bật"
+    end
 end
 
--- Button click
 toggleButton.MouseButton1Click:Connect(function()
-	frame.Visible = not frame.Visible
-	updateToggleButton()
+    frame.Visible = not frame.Visible
+    updateToggleButton()
 end)
 
--- Right Ctrl key toggle (for PC)
 UIS.InputBegan:Connect(function(input, gameProcessed)
-	if input.KeyCode == Enum.KeyCode.RightControl and not gameProcessed then
-		frame.Visible = not frame.Visible
-		updateToggleButton()
-	end
+    if input.KeyCode == Enum.KeyCode.RightControl and not gameProcessed then
+        frame.Visible = not frame.Visible
+        updateToggleButton()
+    end
 end)
 
--- Set initial button state on startup
 updateToggleButton()
 
---Notification
+-- === Final Load State ===
+if espEnabled then
+    enableESP()
+else
+    disableESP()
+end
 
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Script Nhà Làm",
