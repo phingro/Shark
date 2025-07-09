@@ -1,5 +1,10 @@
--- File
+-- Services
 local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local UIS = game:GetService("UserInputService")
+local StarterGui = game:GetService("StarterGui")
+
+-- Config file
 local SaveFile = "script_config.json"
 
 local function saveData(data)
@@ -20,11 +25,95 @@ end
 
 local config = loadData()
 local espEnabled = config.esp or false
-local autoSave = config.autoSave ~= false -- default true
+local autoSave = config.autoSave ~= false
 
--- Gui
+-- === Key System UI ===
 local gui = Instance.new("ScreenGui")
 gui.Name = "ScriptHub"
+gui.ResetOnSpawn = false
+gui.Enabled = false -- will only show after correct key
+gui.Parent = game.CoreGui
+
+local keyGui = Instance.new("ScreenGui", game.CoreGui)
+keyGui.Name = "KeySystem"
+
+local bg = Instance.new("Frame", keyGui)
+bg.Size = UDim2.new(0, 300, 0, 160)
+bg.Position = UDim2.new(0.5, -150, 0.5, -80)
+bg.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+bg.Active = true
+bg.Draggable = true
+
+Instance.new("UICorner", bg).CornerRadius = UDim.new(0, 10)
+
+local title = Instance.new("TextLabel", bg)
+title.Text = "🔐 Nhập Key để tiếp tục"
+title.Size = UDim2.new(1, 0, 0, 35)
+title.BackgroundTransparency = 1
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.Font = Enum.Font.GothamBold
+title.TextSize = 16
+
+local input = Instance.new("TextBox", bg)
+input.PlaceholderText = "Nhập key ở đây..."
+input.Size = UDim2.new(1, -40, 0, 35)
+input.Position = UDim2.new(0, 20, 0, 45)
+input.Font = Enum.Font.Gotham
+input.TextSize = 14
+input.TextColor3 = Color3.new(1, 1, 1)
+input.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+input.ClearTextOnFocus = false
+input.Text = "Nhập key ở đây..." -- default visible text
+Instance.new("UICorner", input).CornerRadius = UDim.new(0, 6)
+
+-- Auto-clear when focused
+input.Focused:Connect(function()
+	if input.Text == "Nhập key ở đây..." then
+		input.Text = ""
+	end
+end)
+
+-- Optionally, reset if empty when focus is lost
+input.FocusLost:Connect(function()
+	if input.Text == "" then
+		input.Text = "Nhập key ở đây..."
+	end
+end)
+
+local btn = Instance.new("TextButton", bg)
+btn.Text = "🔓 Unlock"
+btn.Size = UDim2.new(1, -40, 0, 35)
+btn.Position = UDim2.new(0, 20, 0, 95)
+btn.Font = Enum.Font.GothamBold
+btn.TextSize = 14
+btn.TextColor3 = Color3.new(1, 1, 1)
+btn.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+Instance.new("UICorner", btn).CornerRadius = UDim.new(0, 6)
+
+local requiredKey = "123456"
+
+btn.MouseButton1Click:Connect(function()
+	if input.Text == requiredKey then
+		keyGui:Destroy()
+		gui.Enabled = true
+		StarterGui:SetCore("SendNotification", {
+			Title = "✔️ Đúng Key!",
+			Text = "Chào mừng bạn!",
+			Duration = 5
+		})
+	else
+		btn.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+		btn.Text = "❌ Sai Key"
+		wait(1.2)
+		btn.Text = "🔓 Unlock"
+		btn.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+	end
+end)
+
+-- Create main GUI but don't show it yet
+local gui = Instance.new("ScreenGui")
+gui.Name = "ScriptHub"
+gui.Enabled = false -- keep hidden until key is correct 
 gui.ResetOnSpawn = false
 gui.Parent = game.CoreGui
 
@@ -44,7 +133,7 @@ frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 frame.BorderSizePixel = 0
 frame.Active = true
 frame.Draggable = true
-frame.Visible = true
+frame.Visible = false
 frame.Parent = gui
 
 local title = Instance.new("TextLabel")
