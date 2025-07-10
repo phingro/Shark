@@ -102,7 +102,7 @@ getKeyBtn.MouseButton1Click:Connect(function()
     })
 end)
 
-local requiredKey = "TEST_KEY"  -- change to your actual key
+local requiredKey = "snvv"  -- change to your actual key
 
 btn.MouseButton1Click:Connect(function()
     if input.Text == requiredKey then
