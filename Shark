@@ -1,36 +1,125 @@
 -- Services
-local HttpService     = game:GetService("HttpService")
-local Players         = game:GetService("Players")
-local UIS             = game:GetService("UserInputService")
-local StarterGui      = game:GetService("StarterGui")
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local UIS = game:GetService("UserInputService")
+local StarterGui = game:GetService("StarterGui")
+local SoundService = game:GetService("SoundService")
 
--- Config file (optional autosave)
+-- Config
 local SaveFile = "script_config.json"
 local function saveData(d) pcall(function() writefile(SaveFile, HttpService:JSONEncode(d)) end) end
-local function loadData() 
+local function loadData()
     if isfile(SaveFile) then
         local ok, res = pcall(function() return HttpService:JSONDecode(readfile(SaveFile)) end)
         if ok then return res end
     end
     return {}
 end
+local config = loadData()
+local espEnabled = config.esp or false
+local autoSave = config.autoSave ~= false
 
-local config      = loadData()
-local espEnabled  = config.esp or false
-local autoSave    = config.autoSave ~= false
-
--- Main GUI (hidden until correct key)
-local gui = Instance.new("ScreenGui")
+-- === GUI Setup ===
+local gui = Instance.new("ScreenGui", game.CoreGui)
 gui.Name = "ScriptHub"
-gui.ResetOnSpawn = false
 gui.Enabled = false
-gui.Parent = game.CoreGui
+gui.ResetOnSpawn = false
 
--- KeySystem GUI
-local keyGui = Instance.new("ScreenGui")
+local keyGui = Instance.new("ScreenGui", game.CoreGui)
 keyGui.Name = "KeySystem"
-keyGui.Parent = game.CoreGui
+keyGui.Enabled = false
 
+-- === Loading GUI ===
+local loadingGui = Instance.new("ScreenGui", game.CoreGui)
+loadingGui.Name = "LoadingGui"
+
+local loadingFrame = Instance.new("Frame", loadingGui)
+loadingFrame.Size = UDim2.new(0, 300, 0, 180)
+loadingFrame.Position = UDim2.new(0.5, -150, 0.5, -90)
+loadingFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+loadingFrame.BackgroundTransparency = 1
+Instance.new("UICorner", loadingFrame).CornerRadius = UDim.new(0, 10)
+
+-- Logo
+local logo = Instance.new("ImageLabel", loadingFrame)
+logo.Size = UDim2.new(0, 40, 0, 40)
+logo.Position = UDim2.new(0.5, -20, 0, 30)
+logo.BackgroundTransparency = 1
+logo.Image = "rbxassetid://6031091002"
+logo.ImageColor3 = Color3.new(1, 1, 1)
+logo.ImageTransparency = 1
+
+-- Progress Label
+local percentLabel = Instance.new("TextLabel", loadingFrame)
+percentLabel.Position = UDim2.new(0.5, 0, 0, 80)
+percentLabel.AnchorPoint = Vector2.new(0.5, 0)
+percentLabel.Size = UDim2.new(1, 0, 0, 25)
+percentLabel.BackgroundTransparency = 1
+percentLabel.TextColor3 = Color3.new(1, 1, 1)
+percentLabel.Font = Enum.Font.Gotham
+percentLabel.TextSize = 16
+percentLabel.Text = "Đang tải... 0%"
+
+-- Progress Bar BG
+local progressBarBG = Instance.new("Frame", loadingFrame)
+progressBarBG.Position = UDim2.new(0.5, -130, 0, 120)
+progressBarBG.Size = UDim2.new(0, 260, 0, 6)
+progressBarBG.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Instance.new("UICorner", progressBarBG).CornerRadius = UDim.new(1, 0)
+
+-- Progress Bar Fill
+local progressBar = Instance.new("Frame", progressBarBG)
+progressBar.Size = UDim2.new(0, 0, 1, 0)
+progressBar.BackgroundColor3 = Color3.new(1, 1, 1)
+Instance.new("UICorner", progressBar).CornerRadius = UDim.new(1, 0)
+
+-- Sound
+local sound = Instance.new("Sound", SoundService)
+sound.SoundId = "rbxassetid://9118823107" -- soft UI beep
+sound.Volume = 1
+sound.PlayOnRemove = true
+
+-- Fade In + Load
+task.spawn(function()
+    for i = 1, 10 do
+        loadingFrame.BackgroundTransparency = 1 - (i * 0.1)
+        logo.ImageTransparency = 1 - (i * 0.1)
+        task.wait(0.03)
+    end
+
+    for i = 1, 100 do
+        percentLabel.Text = "Đang tải... " .. i .. "%"
+        progressBar.Size = UDim2.new(i / 100, 0, 1, 0)
+        task.wait(0.02)
+    end
+
+    -- Fade out the loading GUI
+    for i = 1, 10 do
+        loadingFrame.BackgroundTransparency = i * 0.1
+        logo.ImageTransparency = i * 0.1
+        percentLabel.TextTransparency = i * 0.1
+        progressBar.BackgroundTransparency = i * 0.1
+        progressBarBG.BackgroundTransparency = i * 0.1
+        task.wait(0.03)
+    end
+
+    loadingGui:Destroy() -- Destroy the loading screen after it's done
+
+    -- Show the key GUI after loading finishes
+    keyGui.Enabled = true
+end)
+
+-- Rotation
+task.spawn(function()
+    local r = 0
+    while logo and logo.Parent do
+        r = (r + 5) % 360
+        logo.Rotation = r
+        task.wait(0.01)
+    end
+end)
+
+-- === Key System GUI ===
 local bg = Instance.new("Frame", keyGui)
 bg.Size = UDim2.new(0, 300, 0, 180)
 bg.Position = UDim2.new(0.5, -150, 0.5, -90)
@@ -106,19 +195,19 @@ local requiredKey = "snvv"  -- change to your actual key
 
 btn.MouseButton1Click:Connect(function()
     if input.Text == requiredKey then
-        keyGui:Destroy()
-        gui.Enabled = true
+        keyGui:Destroy() -- Destroy keyGui to hide the key input UI
+        gui.Enabled = true -- Enable the main GUI once the correct key is entered
         StarterGui:SetCore("SendNotification", {
             Title = "✅ Đúng Key!",
             Text = "Chào mừng bạn!",
             Duration = 5
         })
     else
-        btn.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
-        btn.Text = "❌ Sai Key"
+        btn.BackgroundColor3 = Color3.fromRGB(170, 0, 0) -- Show error color
+        btn.Text = "❌ Sai Key" -- Show error message
         wait(1.2)
-        btn.Text = "🔓 Mở Khoá"
-        btn.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+        btn.Text = "🔓 Mở Khoá" -- Reset the button text
+        btn.BackgroundColor3 = Color3.fromRGB(0, 170, 0) -- Reset the button color
     end
 end)
 
@@ -369,7 +458,7 @@ speedInput.FocusLost:Connect(function(enterPressed)
             if humanoid then
                 humanoid.WalkSpeed = speed
                 StarterGui:SetCore("SendNotification", {
-                    Title = "✅ Đã đổi tốc độ chạy",
+                    Title = "✅ Đã đổi tốc độ",
                     Text = "Tốc độ mới: " .. speed,
                     Duration = 4
                 })
@@ -384,7 +473,64 @@ speedInput.FocusLost:Connect(function(enterPressed)
     end
 end)
 
-createToggle(mainPage, "esp người chơi", espEnabled, function(state)
+-- Jump Power
+local jumpRow = Instance.new("Frame", mainPage)
+jumpRow.Size = UDim2.new(0.95, 0, 0, 35)
+jumpRow.Position = UDim2.new(0.025, 0, 0, 85) -- adjust Y as needed
+jumpRow.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+jumpRow.BorderSizePixel = 0
+
+local rowCornerJump = Instance.new("UICorner", jumpRow)
+rowCornerJump.CornerRadius = UDim.new(0, 6)
+
+local jumpLabel = Instance.new("TextLabel", jumpRow)
+jumpLabel.Text = "Nhảy"
+jumpLabel.Size = UDim2.new(0.5, 0, 1, 0)
+jumpLabel.Position = UDim2.new(0.05, 0, 0, 0)
+jumpLabel.BackgroundTransparency = 1
+jumpLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+jumpLabel.Font = Enum.Font.Gotham
+jumpLabel.TextSize = 14
+jumpLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+local jumpInput = Instance.new("TextBox", jumpRow)
+jumpInput.Size = UDim2.new(0.4, 0, 0.7, 0)
+jumpInput.Position = UDim2.new(0.55, 0, 0.15, 0)
+jumpInput.PlaceholderText = "50"
+jumpInput.Text = tostring(Players.LocalPlayer.Character and Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid") and Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").JumpPower or 50)
+jumpInput.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+jumpInput.TextColor3 = Color3.fromRGB(255, 255, 255)
+jumpInput.Font = Enum.Font.Gotham
+jumpInput.TextSize = 14
+jumpInput.ClearTextOnFocus = false
+
+local jumpCorner = Instance.new("UICorner", jumpInput)
+jumpCorner.CornerRadius = UDim.new(0, 6)
+
+jumpInput.FocusLost:Connect(function(enterPressed)
+    if enterPressed then
+        local jumpPower = tonumber(jumpInput.Text)
+        if jumpPower then
+            local humanoid = Players.LocalPlayer.Character and Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+            if humanoid then
+                humanoid.JumpPower = jumpPower
+                StarterGui:SetCore("SendNotification", {
+                    Title = "✅ Đã đổi chiều cao",
+                    Text = "Chiều cao mới: " .. jumpPower,
+                    Duration = 4
+                })
+            end
+        else
+            StarterGui:SetCore("SendNotification", {
+                Title = "❌ Sai",
+                Text = "Vui lòng nhập số ko phải chữ!",
+                Duration = 4
+            })
+        end
+    end
+end)
+
+createToggle(mainPage, "Esp người chơi", espEnabled, function(state)
     espEnabled = state
     config.esp = state
     if autoSave then saveData(config) end
@@ -394,6 +540,10 @@ end)
 -- === Misc Page
 createScriptButton(miscPage, "Infinite Yield", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+
+createScriptButton(miscPage, "Keyboard script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
 end)
 
 -- === Settings Page
@@ -434,6 +584,6 @@ end
 StarterGui:SetCore("SendNotification", {
     Title = "Script Nhà Làm",
     Text = "Tạo bởi cá",
-    Button1 = "Thank <3",
+    Button1 = "Cảm ơn<3",
     Duration = 5
 })
