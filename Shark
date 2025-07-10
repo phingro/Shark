@@ -1,1 +1,439 @@
-([[This file was protected with MoonSec V3]]):gsub('.+', (function(a) _oFmPTxQXDZuj = a; end)); return(function(l,...)local d;local a;local s;local t;local h;local r;local e=24915;local n=0;local f={};while n<419 do n=n+1;while n<0x213 and e%0x462a<0x2315 do n=n+1 e=(e-940)%12346 local b=n+e if(e%0x130e)<0x987 then e=(e*0x5f)%0x81ba while n<0x1a1 and e%0x2f24<0x1792 do n=n+1 e=(e+125)%36441 local b=n+e if(e%0x44c2)<=0x2261 then e=(e+0x1e6)%0xb5c9 local e=4027 if not f[e]then f[e]=0x1 t="\4\8\116\111\110\117\109\98\101\114\111\108\107\105\82\121\74\112\0\6\115\116\114\105\110\103\4\99\104\97\114\98\68\112\102\103\108\89\75\0\6\115\116\114\105\110\103\3\115\117\98\110\87\110\89\109\117\106\65\0\6\115\116\114\105\110\103\4\98\121\116\101\84\102\67\74\71\73\70\114\0\5\116\97\98\108\101\6\99\111\110\99\97\116\104\67\103\114\73\74\107\114\0\5\116\97\98\108\101\6\105\110\115\101\114\116\74\97\107\105\85\102\72\74\5";end elseif e%2~=0 then e=(e*0x3ae)%0x5f5b local e=30227 if not f[e]then f[e]=0x1 d=function(d)local e=0x01 local function f(n)e=e+n return d:sub(e-n,e-0x01)end while true do local n=f(0x01)if(n=="\5")then break end local e=s.byte(f(0x01))local e=f(e)if n=="\2"then e=a.olkiRyJp(e)elseif n=="\3"then e=e~="\0"elseif n=="\6"then h[e]=function(n,e)return l(8,nil,l,e,n)end elseif n=="\4"then e=h[e]elseif n=="\0"then e=h[e][f(s.byte(f(0x01)))];end local n=f(0x08)a[n]=e end end end else e=(e-0x284)%0x72 n=n+1 local e=42291 if not f[e]then f[e]=0x1 r=tonumber;end end end elseif e%2~=0 then e=(e+0x35d)%0x7e9c while n<0x181 and e%0x1aa4<0xd52 do n=n+1 e=(e-539)%31227 local h=n+e if(e%0x381c)>0x1c0e then e=(e-0x224)%0x53d4 local e=25758 if not f[e]then f[e]=0x1 a={};end elseif e%2~=0 then e=(e*0x1a)%0x8599 local e=71029 if not f[e]then f[e]=0x1 end else e=(e*0x230)%0x59ea n=n+1 local e=92112 if not f[e]then f[e]=0x1 s=string;end end end else e=(e-0x10b)%0x67d9 n=n+1 while n<0x39d and e%0x2c78<0x163c do n=n+1 e=(e*267)%12646 local d=n+e if(e%0x16c6)<0xb63 then e=(e*0x2b4)%0x5d4d local e=60681 if not f[e]then f[e]=0x1 end elseif e%2~=0 then e=(e+0x3ab)%0x7b2f local e=35704 if not f[e]then f[e]=0x1 h=getfenv and getfenv();end else e=(e+0x93)%0x9f9e n=n+1 local e=94498 if not f[e]then f[e]=0x1 h=(not h)and _ENV or h;end end end end end e=(e*255)%27165 end d(t);local e={};for n=0x0,0xff do local f=a.bDpfglYK(n);e[n]=f;e[f]=n;end local function b(n)return e[n];end local j=(function(l,s)local t,f=0x01,0x10 local n={{},{},{}}local h=-0x01 local e=0x01 local d=l while true do n[0x03][a.nWnYmujA(s,e,(function()e=t+e return e-0x01 end)())]=(function()h=h+0x01 return h end)()if h==(0x0f)then h=""f=0x000 break end end local h=#s while e<h+0x01 do n[0x02][f]=a.nWnYmujA(s,e,(function()e=t+e return e-0x01 end)())f=f+0x01 if f%0x02==0x00 then f=0x00 a.JakiUfHJ(n[0x01],(b((((n[0x03][n[0x02][0x00]]or 0x00)*0x10)+(n[0x03][n[0x02][0x01]]or 0x00)+d)%0x100)));d=l+d;end end return a.hCgrIJkr(n[0x01])end);d(j(46,".yG5p*{%aJRvZkD6k%"));d(j(175,">dpiy9o8Ah^J35gb9d^AooJA-8yb^9gb55AgbFihA53=pboy3hdy8_^.dbb^y3kAy3hJb8yAoggypyo^JJp8oo^gJoPJ38d^opJAVbiAA^0ip^Ai3hyAho8y3JAh5Jp^8p3AdpudJ^bboi^ibh9yAp3gig8JbdiohIo^Jb8hJgppo899659o^A,399Ai5^ydA5goihA55^3pdJ5ido8o3<Ihoh^8(JyhhJboyt833yp8oh5Apbo953JA(3^3a39JJ5Sh95obb^9y^A3hig8yghpAdho^pgoh3pdgo^^orAi5Aog^yi88A9599gJ8?3od3dp8935ik8:p98dyomJ9W89ohgbyig83g5i5hy59d)8833J+?o3o-y9oJdbJg5^5b8y^A35biAh9gAn8oJ5Ado9yh5^^b5J5K89^h3gbyAAi3Jp98J53doAAJ5J^q33AdJoiJhdH9yAp;8y38pgbyo838J3gAJ58p38g35d9oJJ9gdi5Aygiy3^85op^p585ihA35yp^Ad3pdgogJ368o3hGgyg^i5bJighogxpbhd35fEAp^op899J^d9boyJO9y^^gbigdhig^igAbgie995JoU3oa^zb38pyb"));snqDDkbFQhbdRya=function(e)e((-7293+(function()local d,n=0,1;(function(f,n,e)n(e(e and e,e,f),e(e,n,e),e(e,n,n))end)(function(f,h,e)if d>206 then return h end d=d+1 n=(n-495)%47503 if(n%844)>422 then n=(n+431)%25278 return h else return h(h(h,f and f,h),f(e,e,f)and f(f,f,f),e(f and e,e,h and f))end return e(e(f and e,e,h),f(e,h,e)and f(e,e,e),h(h,e,e))end,function(f,e,h)if d>413 then return f end d=d+1 n=(n*804)%9726 if(n%656)>328 then n=(n-272)%45720 return e(e(f and e,e and f,f),e(h,f,e),h(e,e,e and e))else return h end return e end,function(e,f,h)if d>380 then return f end d=d+1 n=(n-629)%16015 if(n%1246)<623 then return e else return e(e(h,h,h)and f(e,e,e),h(e and f,f,e and e),e(h,h,e))end return e(h(e,e,e and f),f(e,e,f)and e(f,e,f),e(h,f and e,e))end)return n;end)()))end;ayRdbhQFbkDDqns={a.TtsyiSim,a.gDxlAmsX};local e=(-12798+(function()local d,f=0,1;(function(n,f,h,e)e(n(f and e,n,n,h)and e(e,e,f and n,n),e(h,e,e,f and f),e(n,f,e,f)and f(e,n,n,e),f(h,f,e,n and n))end)(function(h,e,n,s)if d>137 then return e end d=d+1 f=(f+464)%37341 if(f%624)>312 then return h else return e(h(h,n and n,h and e,n and h)and n(e,n and s,h,e),n(s,h and h,n,e),h(e,s,h,n),s(e,n,e and e,n))end return s(h(e,e,n,h),e(n,n and s,n,e and h),e(s,n,n,e),h(e,s and h,e and n,s))end,function(h,n,s,e)if d>498 then return n end d=d+1 f=(f-869)%24659 if(f%882)<=441 then f=(f*575)%33512 return s else return n(h(e,e and n,h,h),h(n,s,s,e),h(h and s,e,e,h),s(e and s,n and s,e,e))end return n(n(h,e,n,e),s(h,n,h,n and s),h(e,e and e,n,n),e(n,e,e,s)and n(e,n and e,e,n))end,function(h,n,e,s)if d>146 then return e end d=d+1 f=(f*100)%30259 if(f%1266)>633 then return h(e(h and s,e,n,n),h(n,s,e and h,n),s(s,e and h,e,e),n(s,e,n and n,h))else return n end return e end,function(n,s,e,h)if d>108 then return h end d=d+1 f=(f-928)%3361 if(f%366)>=183 then return n else return s(s(e,n and n,s,e),e(e,n,n and s,h)and n(e,s,n and e,n),e(e,n,h,h and n),s(s,h,h,e))end return e(h(h,e,s,h and e),h(n,e,n,s),n(h,e and n,e,e),n(h,e,e,n and e))end)return f;end)())local b=a.ULUZjStX or a.wyGZvcPH;local se=(getfenv)or(function()return _ENV end);local d=3;local t=4;local h=2;local m=1;local function ne(k,...)local o=j(e,"-j7>*,Vb#f5vhs1<#>joj#7/7f*j>#*t*#*1<*Ih7>77>j>s<j*b*f5hfjjfVshhvj#Vs51M1#<2<#(M+#>h,#777#>x>#*J*#,Lfh5.V5bJb## ##f4,#j71#vjhOhDh#s?sVbsfVvjv,#vh!sjj57c7#>I>#*o*#*yfbVjV1bwb##;#Vj<,>*5,1,1vfs#h#sps#s1b<5j77=><1hf#js*sV<75jV5*h>#hjVs*7bhV>*7<<Ab3<5j51vRv#hdhVV1V,f7f1Vv<f^Vd#j&j#j11j1v15<bW,,7,#VJV#beb#o0s1,rf5595#v+v#h4h#jfj#1j<5<F<#0u:V5s*77*77ff*,j5b7,*>5jbj#sf7s#<#j*1ffh,5#vkv#v1<1vfs1jV1,hfVjfbvf>5jvjV1jffhh11m5vfV,>5f7b***1f*,*7h75>vAVf7jbs<7s*hV#h1f<h<#%g4#D15fss1,1fs*11N>S< 5nhjVbjb<#?##f!<1:<j5j,jf7>>8sjs<1!1#<=<Vfkh_hshfh5s1>7>#*A*#,N,#VGfhvIbf#V##fnf#j>jh777j717<sj171W1#<?<Vf*vVs7v*171*1s1V<V*f,<,#VSV#1>1V<jhhs*k>X711tj7J777h77,j*j15<w<#!kD#jgj#b*V#>7>#*m*#,F,#V0f#vMb5#X##fwf#5!5#h*<#hjs#sJs#1!1Vf5v5fvv,vvhfv5vbsv1hhss,T5o<jhVfb,b##y###1*#*5,1,1v5h0h#s3s#1t1#*1v#x7l#jLj#7l7#vXb1#=*f,#,#VdV#V17b>v*E*V>>>P>>vjh7hEh#scsVbh535vv,f#h>vshVsv7f>v>#*Y*#*115jb7j71>,Ev>V*l*7,b5fvsv#h h#h1bVb7bs57v*vsfsv5s5s#1V1s>f,j*#,P,#,1f1,fb1vV#,bc+j>,s7v>5V#7>jV*#V571f<,<#Qgl#015<h5s1s1>f*v*#,;,#,1G*7s77>v*,>1,>>%VVV7vfhhh#s}s#s1bsf5v5v#hVhsvHsvs,s1<>*j*s,.,#VLshsjs51h1sfj575T5#vkvV,hb*#v#5ff5,#jvV5vAfj#j#707#71s*11o,shj(jvjVbjbh#p##f2.hjfj#j,vfs5h#sQs#s1b15#v8vb5*v1h*h#h*1s<><7<<uIj*<jj5js7,71><j5,,,sV>vjv<hzh#szsVVh595,vavv#*j7j#7e7#>L>#*Y*#,B,fb7V#b&b#b1j1*#,V,h,V>vbVbs#,###<,5b*5,555hvhjj7j7i7#>S>Vs7<<)hj,85j<jh7V#j#sflf#5J5V*VV7b7b<sjsv1A1#</Vvb,V5jjjs7:7#>B>VsV<5Yh;*V7V#b:b##9##jQ111Y5fvsv#huh#h1b>#15*f1v,f#v<5hsjh51#1b>v*j*5,m,#V_V#bIb#v1h#fj5Q5W5#vavV*1b<b5#>f,fVfs<f9,?#jXj#j1hVvs15<V*f,v,#VZV#V1O#>#*,*j*7,V>>V#VsVsh5sPs#1!1#<4<#**h#jj7I7&7#>F>Vsf<s<5j5617>7hbf#5##f0f#f1>bV#V*b1#*V,fwfh5,<jejFXn#jqjVss1R1h<,<v<5mbN#VjbVbOb##n#Vj<*5,,,s>sV5bvbVbhf,f75o5b<fC1&#j{j#j1sr1#hb<V1j1sjf<5Bf<sjv>1>vf7f#5i5#vTv#h^>Vjxsf1f1#<^<#<15*v1s,sss51b1#<h*f,,,#VzV#V1Jb>#><*sff5_5#vev#hjs>sxs#1y1V#jvZvvv5s>s:sb1,s51s*7*#,r,#VcV#v3sshm#ffff#5c5#51,,bjb7#b#h*fVsVh<f4b?#j8j#j1v7sh<,<7eb<1,f##V#bgb#b17,*j*5,hjj,<V5b,bV>ff##55*,fvjvvh;hshVhh1,s11,5f{#n7j,jjsjkV>z>#><7h*V*hjj*<>*hjsRs+s#1X1Vbhv&vbv<v1h*ss7f>5>#*=*#*1<,!17f7sSs75>>>1*s575#vtv#hkh#sXv#j<1f<,<#x%4#!15Vsb1V1V>f*v*#,p,#,1!,j1>f>sj>*1,,,sVlVbv5hBh#s_s#1n1#<0>#u7z#jIj#7=7#vQf1#S*fV>,#V8V#V17V>h*j<f*<,tvb5f17h*51#7*j#hff<<17v7%5jQj#7E7#>6b#f,##,jV,VlV#bYbVzh*A*v*<*1V>*vV7Vsb5#1f*171#<c<#?yO#<u#bV?75>B>#*2*#,p,#f75#bj#N#d##f=fV7<VO,hbVbhbVbssf1<1#<N<#<1f5hbhbs7s<17<,11vj<7o5F1jsjsbffj##f=f#f1>>,5V*b*b##vfaf1f<fs#*v#vsh#s>fh75>l>#*I*#,u,##*5#bjb1#.##fOfV>s,5VsVsV1hfsfs#1r1#11#,v1h>v5s,s71J1b>f***#, ,#,1j<j1>##jfffTf#5g5V*hV*bvb5#ff,*fb<5j_*1fbj5,7*?fs1>7>#*+*#,z,#5_h#vwbffj##f_f#f1**,1V<Vs,<##f,f7fb575*55h,h7s.sb7f*b>#*J*#*11>/5j*7*7#>v*%*1*<*s*,VvV7bb#*#f#7fvfV5b5*h7Efj#j#7D7#71h><1U,AsjZjb17bjb<#x##fyfVj57>7h>,>1*bsj1f1A1#<9<Vf1h*v1s>v7s<1f<V<s1*<1j>j<j5jh7V#jfjfyf#5+5V*fbtbhb5#s#5f#f<<j<s{i%#jYjVvssV<j<,*j*<,Q,#VkVV3f77>v>V*b,,5j5hv.v#hu7v>#>f,71f<#<#aEq#Y1vjh5s,ss15<b<#,jVvV}V#b;bV>h>**v*5,fV,,#V*b#b<b<#5f;,<5>v*v#v<jj7#7m7#>%>Vsf<s<5g*41jf7#7s7s>V*v>,*1VfVsvfhvh#s4s#s1b#f1v,fhvVhvsbs7s*s1>5*U*#,%,#V)7#s7>##j#hfNf#5a5V,1b*bfhfsfs#1&1#11f,51hfhsv*s71vs1>f,+*#,m,#,1c,f5bvV5*n<f*>h55hf#V57fb*shh71j<7<q<#qF(Vvjsq7hj7ffhf15<*9*,fV5V#bZb#b1j,*v*7,P,#,5V>b,bVsj1>1X1#<L<VfsvVsjs,5h1=1,<S<vh*,j,sVqV#bubVjh>5,>*V5jvjvnv#hyhVV1V5Vh5_5v5<51h>jj7c7u7#>k>Vs<<5kh=5?vjsj1bff>##fqf#f1s1ffv1<Vh,5h*j1shjf55<vTbjh*hfs#>*j5>v*m*5,.,#V_V#b9b#f#h#fj5R5o5#vJvV*h#/#v#Vb.5V57<5a0(#j4j#7)5#bjb#*j,7,=,#VNVVah7*>v>V>1*<>GVVV7vfhfh#sOs#s1f751v,v#5*v5sbh17f>*>#*t*#v7sjs*hsbj#f#/##fBfV7h,s,1V7bvV,b1fffs#X5b#bv#v*h1s*7c#h>7>#*w,5vV,#V8V##,b##T##fV*15u5#v8vhh9hfsisf1x1h,5<#IWN#j*j#7j7#>*57*e*#,}##VEVfbpb#*h##faf#5z5#v^v#ht>>s=sf1n1#<a<#CUd#j,j#7K7#>:>#*j*#bd#hVlV#b.b##F#1fZ55575#vjv#1vh#sks#<7<><Q<5:cjsj?j#7m71hj>#*>*#,<,#VjV#bjb##!>bf/f#595fvZv#hmh#j>s#171#<7<#Ajr#777*7?75>^V)*c*#,iV5b5V#b>b#f>##f&f#h6vVvKvvh^hvs;+b1m<5;,<#=*P#>,j#7e7#,_>h*9*h,K,hV+b#b4#5fh##f,f#v>5#v(v#1Pf7sTss1=1s<L,h.0j5jjj#7V7#*>>#*z*#b^,5VCV1b{b1#4z7fLf#vs5#vbv#h_h#s8s#<7{><4wLwU>>jWj#7t>5>*>#*f*#5j,#V;V##7#b#^f7fIf15l5#vNvhh*h#s#s#yj1#<j<#H%*Vj&7*797s>=>#*k*##1,#VsV#bvb##E##fY,#5Zv*v)v5h4h5sos#jb1#<b<# vg#jhj#7),<>x><*A,*,cV>V?VhhVb#####5vf#5j5#v45>h;s3sR1k1{1#<m<1fjw#j#j#>77#>j>#*V*#,d_bV_V#bYb5#?##fFf#*<5#vDv#h*h#sws#1qfb<i<#oAjUjZj#7Y7#s<>#*m*#,>,#VpV#bU7b#=##fIf<5w5#vdv#V<h#sSs#1j1#<e<#eUZ1ji7j7L>Q>J>#*t*#V7,#V5V#bOb##r##fwv>5Kvjv_v5hEh5sds#<s1#<D<#mft#j?j#7e>b>R>#*B*5,g,#VQV#bfb##O##fAf#5i5#v*h<h^h#s3>v171f<= 5VV0#jgj#>f7#>D>#Vzg,,{,#VWV#bGb1#Bf5fhf#5S5#1vv#h4h#17ss1e1#<xjjL_U#j+>#7s7#>u>#*g*#fh,#b7#7bwb##:f7fPf#5I5#vbv#hBh#sjs#1R1#i7g5B)u#j!*j7e7#>D*55V*#,t,#fsV#bqb#5V1Vfgf#5d1*vqvfh0X1s:sh*51#<H<#>h4#jjj#7*f7>O>#*m#,,J,fV.V#*7b##/##fjf#5G5#h7j1hyh#sQ<71G1#<?j#jf?#j2j#7I7#f#>#,7V,,!,5V}bbb=b##8##5>f#5Z5#v7v#h7h#17ss1C1f<Bj7P/}#jP>#7h7#>j>#*j*#v#,#b7bfbtbv#EhjfSf#5u5#vfv#hjh#s>s#171#B7,1yGr5jQ>77Y7#> ,#,f*#,7,#V7V#s#b#f7fjfzfh5(l#vEv#hwh#1bs#171#<*<#B7^#777u7m7v>/,7*e*#,Db#VhV#b>b##>##<#f#v7vsvIvshm1vsis#1{1#<s<#2>g#j,j#777#*7s1*(*h,Lv1VAV#bYb1jj##f,f#575#vjv#h7h#s4#b1!1#<R<h. C#jWj#h<7#>t>#*D*#,S,#VV<fb2b1#!f#fGff5355v%v#V<h#sps#1*1#<H<#0NvbjAj#7L7#>Z>#*3*#f7,#VbV#bVb##^##fef15+5<vIvfhlh5sJ<#1b1#<#<#)bP#b5j#7V>7>{*c*(57,+,fVYVfb bh15##ftf#<55#vjv#hB*9s^1i1o1#<I<#FB7#**j#7f7#>b>#vf*#bVvVV^bjbysV#q#ff!Ch5(5hj5v#h%h#71s#1j1#< bf}Qjjj_j#7S7#>+>#v#*#,f,#VjV#byb#f7sbfi575rs,vFv#h_1#s1s#151#<5<#,fw#777#78>>>RvN*p*#,n,#b7V#b5b##7##f7f#slvWvdh7hD15s(<11xj#<s<#R5L#*7j#f*7#Vu***R,7,2#sVzshbr#51V##fvf#v55#v^v#1y#5sA1>1w<><cV1.Ej#jjj#757#f>>#*v*#V7,vVBb>bn5,#n##fLv#vf5#vvv#hvh#7fs#<7<,<=S*FU#mjPj#7g7#*b>#*v*#,7,#V7V#56#V#.f>f_v55Lvhvgh57Vh#shs#<51#<H<#7u7#je7*7H>*>.51*o,#,s,#VvV#s>b##h##57v,5Tv*vm1,hrh#s=<#<*1#<h<#0h+#Vfj#>77s>J*,*U*<,:,#V9V#b*b##1##fvf#5?5#v%h<hAs*s=1V1415<?N5b5p#jsj#7f7#>N>#V:*v,rV,VZb,brsj#:f5fff#515#svv#hmh#17sv1Q<b<k<h=8}#ji757>7#*n>#Vv*#,Y,#b7V<bU#f#_s,f;f#5m5#vfv#hsh#1js#171#0Dhv^_j*j_##7J>,>u*5v5*#,s,#VfV#bab#5wfbf95,5Sv,vpjjh+s51*s#111#>f<#Y=(#77j<7 >b>85j*!*#,oV5bvV##ub#hf##fPf#v75hvDhfhKs>sXs#1Q1#3v<#)sQ#7jj#777#*ch#*t,*,;vfV8b,bm#5#>##fsf#h55#vNv#1D17s{1,14<,<lj,q:j57,j#717#V*>#*A*#V7,1Vlbbba5h#D##fZ55vV5#hkv#<*h#sYs#1a1v<OY,Wej#j_j57u>#U>>#*h*#5,,#VsV#507v#lf*fpss5OsvvP1#7#h#shs#*11#7><#j7a<j}7,7!,,>}>#*AV#,<,#VsV#bsb#sf##57vj5rvVvR7fhMh#sgs#1j1#<<<#}h.#j%j#7X><>k*,*L,b,g,5Vab5bvb##1##hVf#5}5#s071hesVsH1V1J*j<))5_1/#j<j#*v7#>z>#,7V,,yV#Vlv1bDb##C##f7f#515#h+v#h7h#1Msh1G<,<A*#MYjVjm75>j7#>s>#Vs*#,:,##OVhb&#,#Nf,f3<j5Gv5,Vv#h1h#j#s#1P1#<G>*YIjbjA7*7i7#>C>#*#*#,s,#V<V#b7b#vzf#fp5,5m{5v_hVh3s5sVs#111#<f<#=y+#>%j17l>V>I*V*Z5j,pV5V>V#b<b##V##fef#v7h7v8h#h8<>sFs#1+<5*#<#jj+#>vj#7{7#*7***:,5,Ih<VdV#b(b#f>##f1f#v75#v7v#sLsbsd1,1n,#<tmV&L>#7>j#7s7##s>#*V*#V7VfV4bVb}57#n##fHv#555#v1v#h1h#7fs#<7jn<A_bCHi1jtj#7X>5>>>#,H*#,V,#VoV##7f*#nfffcf15Q5#vOv#shh#s1s#<j1#<7<#jmj>j)7,7/fb>Q*V*?,5V*,#V1V#v5b##n##vM5j58vVv6hVhoM#sL<#0j1#<1<#E1 #*bj#>N>1>T*,*_##,(VVVJf##hb##s##<vf#vb5#h7vshNsVsRB,1q1#<oj#j,N#j1j#717##f>#,7,#,+VbV+VsbNb##S##f<f#vt5#vhv#h.h#s:s51Z<V<0:#CAt5j0*#>s7#>1>#5b*#fj,#f&#hbg#V#H15fC5:54v5hbv#h<h#sfs#1u1#jM<<C(jbj!7b7D#j>U*5*7*#V&,#VVV#b!b#f7fVf.5f5y1Mvtv#h3s51hs#<71#jv<#J{n#77js7R>v>45<*^*#,J,#bsV#b<b#f>##f7f#vcbvvEhVh2>#s31b1+<5V5<#H<(#jfj#7N7#,T*h*/,b,2VbVrhjby#5#V##5Lf#hv5#v6v#s71qs(1f1(<5<L<#Yej57jj#>77#,v>#*)*#V7V<V6bvb^f*#.##fUf#555#v<v#s>h#s7s#<wvv<T_V}rVfjS7b7t>5fV>#*<*#f5,#VIV#f&s##afbfZ5b5%1#v;s#hvh#s<s#1<1#3j<#jDj#jq7V7xV#>9*b*tb#,j,#V1V#svb##7##575h5Gvbv 17hOh#sI<#1V1#<<<#%<O#Vfj#>77v>H*#*P*1,x,#VEb577b#fj##fVf#5U5#h7sjhns5sps1181#<z<#Y5W#j<j#>77#>7>#,%,>,LVVVBsbbQ#b# f5fVf#5<5#s5v#hCh#<Cs51?<b<T3b)O7,j&75>v7#*3>#,h*#,K,#b7h:bD#f#n5*fIf#5Fv5v7v#s7h#1hs#1:1#<9<vWJjbjq757%75>6*#,V*#,1,#v,V#b<b#vn57f.5V5E7>v_7hhAs51#s#1<1#js<#Hod#>^7f7Q>b>!*b*F5j,dV5jjV##%b#<j##fNf#5nv7vYhfhCsVs2s#1O1#<*<#Q<}#7jj#777#*7*s*Q,#,F#1VNV#b&f##,##5/f#vT5#Nfv#s7sssw1f1ej><g<#tDj5jsj#>77#5,>#*z*#,+b,V2b#bg#5#p#5f{5#jj5#v<v#jDh#1_s#_H<V</?bu^jVjpVv7N*#*,>#*<*#,<,#5bV#bV.f#)fff95v5z5fvXvfhRh#b<s#1K1#<1<#+3%#jNjh7?>b>J*f*X*f,kb#bbV#b<b##1##h5f#hIh,vRhbhZsbsIj<1_11#j<#jjc#jbj#7j7#>j>#*y<b,Y,#V8bVb=b##S##5hf#5<5#hjv#hjh#171s1y<b<%7,?.S#j6>#7s7#><>#*<*#5f,#b7#>bo###0s>fyf#5l5#h,v#sjh#shs#1y1#</.V=kjbji7f7l75>WV#*b*#,<,#h7V#1>b#f7i7f/5#5yvjv8v#hz1#1hs#<n1#zP<#,fa#77>77z>f>n>1*?*#,WV5b,V##7b#v###f0f#v7vRv3hvhk<>sMs#14<58v<#j*y#**j#7Z7#>K*K*I,#,0VhVzV5bH##,>##f<f#jN5#hGv#s7*7sA1#1r<j<}<#4)7#7>j#>37#*Y>#ff*#V7,vV9bfbO5>#W##fD555>5#h7v#s7h#sqs#<7<h<__vSW>>j/j#7t>5*s>#,**##j,#VEV#b_#<#Sf#fP5h5r55vyh#f>h#s<s#*j1#pK<#j7V1jd7#7Db7>H>#*zV#v3,#b_V##^b#hB##vZf55ov#v&h#hc<<se1#1s1#<<<#*QH#7tj#,p>j>A*b*Tv>,6,5V_b5#Ab#f}##v5f#595#sthVhts#st1#1%*j<:w5j> #7jj#7V7#>_>#,7<5,%V5VzV1b_b##&f5fhf#v>5#vVv#hPh#su1v1n<#<)av3pW5jJ7#7#7#><>#5<*#VI,#b7b,b2###2v7fzf#5Yh#v7v#sdh#1Is#<s1#M7t>SAjfjB*>7I7#>r*5<7*#V7,#5>V#b(b#f7f5fH5v5;s>v_v#hLh#s,s#<o1#9><#L7+#7Ajf7_>b>A#s*3,#,dV5VhV##Jb#5s##f_f#h)v5vEh#hOs#sP>j1Z<5rj<#jje##jj#7I7#>IbV*%,5,OVbV0V#bAb#fs##5Cf#v75#v7v#s771sq1f1ej1<2<#3O7##Vj#>j7#*j>#ff*#V7V,Vab5bx5>#d##fC555s5#h>v#>,h#sys#1U<V<.ifmHjvj+j57k>#>b>#,i*#5y,#bjV##7#V#Ef#f?h,5o5#vus#sVh#1:s#<I1#*f<#j751jN7f7Rb>>U>#*l*##h,#b7V#bhb##B##fN5*58v#v)h5hwh5sKF#<>1#D0<#V7!#>jj#>7>,>l*f*E,j,H,#VN####b#fj##5jf#<f5#h7v<hzs5s3s11B1#<{_5}VC#7>j#,#7#>J>#,7<5,dVhV&f>bpb##}f5fjf#v,5#1*v#h)h#s{1v14<f<K!s((35j;7#7V7#*Y>#vQ*#Vj,#b7#,b8#f#9fjf&f#5:h#hjv#sjh#1js#>f1#y7jjlEj5j}*>707#>y*5V#*#V>,#b7V#bOb#f7#<f)5h5}s>v!v#h^s5sss#<,1#*v<#XJJ#jr>E7l>f>S*s*u*5,ZV#b5V##Xb#1j##5jf#v7h>vJhfhYj7s0s#1mK#<j<#jjL#7jj#VM7#,(Vh*A,f,SVfV&f<b}##vs##5.f#1O5#hjv#<z1>s)1#1_,><p<5_nj5j7j#>j7#,5>#*4*#bwVjV?bfb #f#u1jfd555h5#h7v#hVh#sUs#<711<&3vrR=1jtj#7g>5*#>#,**#,V,#VFV#b!f,#EfffL5h5T55vSh#,!h#12s#*<1#gj<#j77,je7f7.,7>?>#*FV#Vf,#bjV##jb#fs##575j56v5v%1>hKh#sx151j1#W><#*<T#jaj#>7*>>D*h*R#v,C,#V0V#b*b#fj##5*f#575#hu>Vhls#s67s1=<f<%I5uj{#7jj#*s7#>_>#VXVj,=VfVLbfbYsj#nf55>f#v75#7jv#h^h#sq<G13<v</S#4EC#jEj#7,7#*j>#,>*#,7,#b7#,b2#5#Iv1f+f#53h#1*v#s7h#17s#>f1#T7*<(Zjvjy*>797#>W*5,c*#V*,#s,V#bub##H5)fu555^vhv{v5h0s#shs#<j1#*0<#j7{#>yjf7d>f>9*#*:b*,Fb#b,V##jb#fj##sbf#5V>fvchvhNhfsHsf1G1f<6<#5<:#j?j#7>7#>J>#*Af7,)VfVxbvbXbf#tf5fVf#vj5#I<v#h=h#<0sf1N<5<T4b2F>*jL>#>>7#*7>#,7*#fb,#VV<fbB#h#/#sf4ff5C51v3v#V<h#sEs#111#<?<#lMvbjWj#7&>f>E>#*9*#<<,#VeV#bvb##8##fH*b525#vRh7hGh#sSs##<1#<}<# >/#jqj#7!sb>O>#*w,b,},#VTV#7hb#f7##5*f#5j5#h7h#h&s5s3.,101#<%j#j,0#77j#>77##f>#,7V,,MVvVKv>bnb##}##f1f#v75#v7v#h7h#171f1c<v<^Wjr{&#jM>#7*7#*>>#,>*#5f,#b777bQ#h#_v>f{f#5rv5vjv#s,h#1Vs#1R1#F7R*;Fj1jB*>7 7#>.*5*7*#Vb,#f*V#b}b##L#ffd5v5/v<v^v5h=s#1#s#<71#Vn<#j>=#77>>7E>v>g*j*e*#,xb#b5V##>b#f>##1ff#v7vhv2hhhA<>sPs#1p<5&V<#j,P#VVj#7/7#*7*f*},1,k#>V3V#bq#5#b##5bf#<V5#vnv#h;sfsa1v1W<<<E<5P3j#5oj#>77#fj>#,>*#V7,5VabvbM57#G##fTv#vb5#h>v#s>h#1ss#<715<Q4h{Fj*jkj#7J>5>1>#,,*#,h,#V.V##7#>#zf1fw5*5D5#vGv#hbh#1>s#<V1#<7<#jwf#j!7579bs>u*v*e,5,h,#b>V#f5b##8##v(5b58vvvChvh=7jsE15<f1#}*<#)VU#jIj#>7>,>.*s*m*1,Q,#V6b5#sb#fV##fVf#5%5#vFv1hRsvsi111w15<u=#j#_#77j##<7#*>>#,7,j,GVvVcv7bab##B5#5*f#v>5#h>v# _h#<m<j1u<v<Dxvz=jfje7#7j7#*7>##R*#V>,#fZbvb_#5#J<>f;f55wv#71v#s7h#>>s#151#67eb?DjvjH*,7{7#>4,#*V*#V>,#b>V#hfb#f7#hf^5h5 5<vXv#hHh#1;s#<,1#<5<#0py#jk7V7N>v>m*s*y*5,EV5b,V##*b##f##fyf#hIh7vghhh(shsF>j14<5Ib<#j,{#>vj#7m7#*7*<*{,1,PfVVAV#be#5fv##5bf#hv5#v6v#s7sfs&<!1%1h<N<#M!.#7Vj#>*7#*#>#*7*#V.7vVQbvbO1##4fhfc55j55#h*v#hfh#szs#A:<,<y{hLmjhjJbj7.>5>5>#,,*#ff,#VJV##7f,#/f1f_v>505#vLh5hsh#1bs#7f1#<R<#j77,jw>W74fj>t>#*{*#,s,#b*V###b##7##5&7#5.vvvWjfhWshsT151f1# *<#75S#jQj#*Y>1>p*h*q,h,?b,V+b5#>b#f,##f>f#5k5#h7h#hMs1s/sv1:1#<i05 >k#7bj#7>7#>H>#*q,7,kVhV}b<b}b5#Nf#j7f#v>5#i,v#s*h#c&1h1L<v<x>scw>vjP*#7s7#*>>#51*##>,#fn#7bl#v#J<5fN{h5=v5vhv#s*h#<ss#1 1#j9<hNTjhj87h79#j>_*5*#*#V,,#5#V#b^b##G5jfr5h5u55v4v5ht<#<*s#<*1#,7<#Zjk#77jf7&>s>e*j*U*#,Pb#bgV##,b#f,##1ff#v7v#vRh1h3h1sSs#1C<5!><#jbE#>vj#7C7#*7>f*MVn,G#>VWV#bU#5f7##5ff#jb5#v6v#h91,sk1s1UQj<%<5&%j#5:j#>*7#5W>#,,*#V7VVV?bsbX57#c##fdv#515#h,v#s,h#1ss#<7<v<yT1lL>hjwj#78>5>j>#,b*##*,#ViV##7#<#A5Tf.hh5Y5#v3v#sfh#1,s#<#1#<7<#jXf#jZ7h7Qbs>2*s*R,5,#,#b,V#f5b## ##vMff5Bvsv;hsh61,sW151,1#^V<#,jR#jzj#>7*>>A*<*Bff,z,#V3b5#>b#f###1jf#5g5#v.h7hxsssI<p1l15<U%#j#U#7*j##<7#*,>#,7,V,xVsVgv7bEb##A5#55f#v,5#h,v#z0h#<n<>1e<s<tRs.:><j?7#7s7#**>##.*#V,,#fSb>bz#h#q<>f4155Yv#hbv#s*h#>>s#<>1#97<5+EjsjO*,7x7#>E,#*<*#V,,#b,V#hfb#f7f,fX515P5<vCv#huh#sss#<,1#<7<#E7r#777f7L>1>D*j*P*#,Wb#bVV##Vb#fV##1ff#v7V7vRh<hJh1sEs#18<5^V<#j#8#>vj#7y7#*7*f*IVj,k#>VmV#b6#5fj##55f#s*5#vOv#h0s,sB111tw7<u<52Nj#j*j#>,7#5X>#,V*#V7VVV_b1b!#j#8##fov#v55#hVv#sVh#7fs#<71<<SI<X.>>jMj#7g>5>b>#,#*#bv,#VWV##7#c#l5jfLh>5i5#v?h5sXh#15s#,b1#<:<#X2Dhj{717p*7>.>5*n,#1t,#b,V#sjb#fV##57v*5Ov1v;17h2h#sd<#<51#.V<#jVP#7sj#>7>7>=*<*/v<,I,#VAb5bhb#f###Ubf#5i5#h7v1hT1jsd*<1Q1#<p<#jj_#7Vj#>f7#>7>#, jv,:VsVNvsbk#1#Yf#O1f#v,5#j>v#s>h#17s51W<1<T7,pxB#j4>#>V7#*V>#,V*#5f,#b7bbb;#<#K5#fef#5(5#h7v#s#h#1,s#1Y1#<;BV}Rj1jz>=7Y75>W*5*j*#Vb,#55V#b4b#5Kvhfg5<5Uv<vP<*hm1#S*s#<b1#mb<#*7u#7p j7A>1>_b**4,<,YV5bsV##bb#h5##fFf#h/5fvNh<hys<su<V1^P#<*<#jb9#7bj#**7#*c>1*c,1,;bVVzb<bC#5#1##5bf#sV5#vzv#1a17sZ1<16<<<l,j/Wj5vVj#>#7#,v>#*.*#V7<1Vw#jb:h*#N##f:f#vs5#hbv#sfh#s7s#<6vv<Z!1aeVsjo7<7K7#>j>#,b*#,},#VpV#ba#s#H5FfNf#5g5#vFv1,jh#1fs#1P1#<j<#Y*{#jehb7L7#>6*s*{*#,6,#)<V#bHb#fb##f}f#5Q,bv6v#hSsvsPs#1U1#f<<#= i#7#j#7w7#>7***wV7,MV,V!V#bib5#h##5vf#v*5#vwv#hEf*sQ<*1Y1#<0<#N4c5jhj#>s7#>1>#*;*#,V1fVp#Vb=#I#u#ff&f55u5#,<v#h=h#s#s#1e1#<G5b_Mi#j%>*7I7#>d>1sj*#V<,#VhV#bjb##7##fB*b5&5#vCsVhDh#sOs##<1#<t<#jhI#j!j#7Vvf>X,#*M*h,0,fVqV5bZb#7<##fUf#vs5#v6v#hrbbsPs#1HE*<%<#_3d#15j#*j7#*f>#*4*#V7,5V+#5bz5V#;##fPf#v75#sjv#h7h#s7s#1&<v<3j50d7jj}j#7q>5>h>#V>*##_,#VyV#b3fR#&55f%f55_55vqv#hjh#<>s#<f1#<+<#j751jT>h7&Vb>8>#*o*#jv,##>V#b7b##7##vAv75Lhhv_sohD<VsWX#1h1#j*<#b7L#*>j#7X>b>L,h*AV>,+,#VuV#bvb#5,##vjf#5y5#h7hbh:11s.7V1S1#<M<#BVu#>bj#7#7#>J>#*Vsf,N#=Vwbfb8bf#_#1fGf#*<5#v6v#h#h#sSs#1ofb<&<#oM9<jzj#7 7#s<>#*8*#,f,#V%V#bm7b#=##flfs5J5#v6v#V<h#sSs#<<1#<m<#SSvbjSj#7!*#>t>#*t*#s*,##*V#f#b##j##fNf55whhv)s7hZh#s{s#1#1#j,<#77S#jSj#>7*,>e,1*)fh,+,#VFV5bhb#5b##fff#5_5#vT><hC1hsR<<161f<q<#j7/#>*j#>v7#>:>#*(*f,%bsVc#vb%b##.f5f7f#hV5#vsv#h h#sZ<*1kM<<Tqj:gY#j6j1vj7#,#>#*5*#,j,#V>V#bw7b#9##f/5j5E5#vQv#V<h#sns#1b1#<R<#COvbj8j#7S7s>Z>#*F*#s*,##*V#f#b##j##f{fh5.hhvJs7hLh#s^s#<,1#j,<#7>+#jdj#>771>c,1*nv,,a,#V{V1Zjb#5b##fVf#5j5#v7v#hkbbsms#1_C#<?<#/zR#v<j#7Q7#>5>#*H*#,c*oVX#hbTf<#F#ffEf1>j5#s*v#hvh#sjs#171#<w5b/_a#jx7v747#>z>#1<*#,!,#b7V#b)b#5Jjjftvs5Uv5vy1*hN1#s*s#_,1#j,<#*b!#j_j57_*<>e,h* *#,L,#V7V#f,b#5b##fjf#h0vMvosshah5sp<b1oc#F><#7,c#>,j#Vb7#>Vhf*/V<,x,vViVfb(bf#o##><f#5P5#s*v#hJh#sShx1i4s
+-- Services
+local HttpService     = game:GetService("HttpService")
+local Players         = game:GetService("Players")
+local UIS             = game:GetService("UserInputService")
+local StarterGui      = game:GetService("StarterGui")
+
+-- Config file (optional autosave)
+local SaveFile = "script_config.json"
+local function saveData(d) pcall(function() writefile(SaveFile, HttpService:JSONEncode(d)) end) end
+local function loadData() 
+    if isfile(SaveFile) then
+        local ok, res = pcall(function() return HttpService:JSONDecode(readfile(SaveFile)) end)
+        if ok then return res end
+    end
+    return {}
+end
+
+local config      = loadData()
+local espEnabled  = config.esp or false
+local autoSave    = config.autoSave ~= false
+
+-- Main GUI (hidden until correct key)
+local gui = Instance.new("ScreenGui")
+gui.Name = "ScriptHub"
+gui.ResetOnSpawn = false
+gui.Enabled = false
+gui.Parent = game.CoreGui
+
+-- KeySystem GUI
+local keyGui = Instance.new("ScreenGui")
+keyGui.Name = "KeySystem"
+keyGui.Parent = game.CoreGui
+
+local bg = Instance.new("Frame", keyGui)
+bg.Size = UDim2.new(0, 300, 0, 180)
+bg.Position = UDim2.new(0.5, -150, 0.5, -90)
+bg.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+bg.Active = true
+bg.Draggable = true
+Instance.new("UICorner", bg).CornerRadius = UDim.new(0, 10)
+
+local title = Instance.new("TextLabel", bg)
+title.Text = "🔐 Nhập Key để tiếp tục"
+title.Size = UDim2.new(1, 0, 0, 35)
+title.BackgroundTransparency = 1
+title.TextColor3 = Color3.new(1, 1, 1)
+title.Font = Enum.Font.GothamBold
+title.TextSize = 16
+
+local input = Instance.new("TextBox", bg)
+input.PlaceholderText = ""
+input.Text = "Nhập key ở đây..."
+input.Size = UDim2.new(1, -40, 0, 35)
+input.Position = UDim2.new(0, 20, 0, 45)
+input.Font = Enum.Font.Gotham
+input.TextSize = 14
+input.TextColor3 = Color3.new(1, 1, 1)
+input.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+input.ClearTextOnFocus = false
+Instance.new("UICorner", input).CornerRadius = UDim.new(0, 6)
+
+-- Auto-clear/reset
+input.Focused:Connect(function()
+    if input.Text == "Nhập key ở đây..." then
+        input.Text = ""
+    end
+end)
+input.FocusLost:Connect(function()
+    if input.Text == "" then
+        input.Text = "Nhập key ở đây..."
+    end
+end)
+
+-- Unlock Button
+local btn = Instance.new("TextButton", bg)
+btn.Text = "🔓 Đang khoá"
+btn.Size = UDim2.new(1, -40, 0, 30)
+btn.Position = UDim2.new(0, 20, 0, 90)
+btn.Font = Enum.Font.GothamBold
+btn.TextSize = 14
+btn.TextColor3 = Color3.new(1, 1, 1)
+btn.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+Instance.new("UICorner", btn).CornerRadius = UDim.new(0, 6)
+
+-- Get Key Button
+local getKeyBtn = Instance.new("TextButton", bg)
+getKeyBtn.Text = "🔗 Lấy Key"
+getKeyBtn.Size = UDim2.new(1, -40, 0, 30)
+getKeyBtn.Position = UDim2.new(0, 20, 0, 130)
+getKeyBtn.Font = Enum.Font.GothamBold
+getKeyBtn.TextSize = 14
+getKeyBtn.TextColor3 = Color3.new(1, 1, 1)
+getKeyBtn.BackgroundColor3 = Color3.fromRGB(0, 85, 170)
+Instance.new("UICorner", getKeyBtn).CornerRadius = UDim.new(0, 6)
+
+getKeyBtn.MouseButton1Click:Connect(function()
+    setclipboard("https://pastefy.app/gkWLMCkb")
+    StarterGui:SetCore("SendNotification", {
+        Title = "🔗 Link đã được sao chép",
+        Text = "Dán vào trình duyệt để lấy key!",
+        Duration = 5
+    })
+end)
+
+local requiredKey = "TEST_KEY"  -- change to your actual key
+
+btn.MouseButton1Click:Connect(function()
+    if input.Text == requiredKey then
+        keyGui:Destroy()
+        gui.Enabled = true
+        StarterGui:SetCore("SendNotification", {
+            Title = "✅ Đúng Key!",
+            Text = "Chào mừng bạn!",
+            Duration = 5
+        })
+    else
+        btn.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+        btn.Text = "❌ Sai Key"
+        wait(1.2)
+        btn.Text = "🔓 Mở Khoá"
+        btn.BackgroundColor3 = Color3.fromRGB(0, 170, 0)
+    end
+end)
+
+-- GUI Toggle Button & frame (unchanged)
+local toggleButton = Instance.new("TextButton")
+toggleButton.Size = UDim2.new(0, 80, 0, 30)
+toggleButton.Position = UDim2.new(0, 10, 0, 10)
+toggleButton.BackgroundColor3 = Color3.fromRGB(50,50,50)
+toggleButton.TextColor3 = Color3.new(1,1,1)
+toggleButton.Font = Enum.Font.Gotham
+toggleButton.TextSize = 14
+toggleButton.Parent = gui
+
+local frame = Instance.new("Frame", gui)
+frame.Size = UDim2.new(0, 240, 0, 300)
+frame.Position = UDim2.new(0.5, -120, 0.5, -150)
+frame.BackgroundColor3 = Color3.fromRGB(40,40,40)
+frame.Active = true
+frame.Draggable = true
+frame.Visible = false
+
+local title = Instance.new("TextLabel")
+title.Text = "Script nhà làm"
+title.Size = UDim2.new(1, 0, 0, 35)
+title.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.Font = Enum.Font.GothamBold
+title.TextSize = 18
+title.Parent = frame
+
+local tabBar = Instance.new("Frame")
+tabBar.Size = UDim2.new(1, 0, 0, 30)
+tabBar.Position = UDim2.new(0, 0, 0, 35)
+tabBar.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+tabBar.Parent = frame
+
+local tabLayout = Instance.new("UIListLayout", tabBar)
+tabLayout.FillDirection = Enum.FillDirection.Horizontal
+tabLayout.SortOrder = Enum.SortOrder.LayoutOrder
+tabLayout.Padding = UDim.new(0, 2)
+
+local tabs, pages = {}, {}
+
+local function createTab(name)
+    local tab = Instance.new("TextButton")
+    tab.Text = name
+    tab.Size = UDim2.new(1/3, -2, 1, 0)
+    tab.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+    tab.TextColor3 = Color3.fromRGB(255, 255, 255)
+    tab.Font = Enum.Font.Gotham
+    tab.TextSize = 14
+    tab.Parent = tabBar
+    tabs[name] = tab
+
+    local page = Instance.new("Frame")
+    page.Name = name .. "Page"
+    page.Size = UDim2.new(1, 0, 1, -65)
+    page.Position = UDim2.new(0, 0, 0, 65)
+    page.BackgroundTransparency = 1
+    page.Visible = false
+    page.Parent = frame
+    pages[name] = page
+
+    local layout = Instance.new("UIListLayout", page)
+    layout.Padding = UDim.new(0, 5)
+    layout.FillDirection = Enum.FillDirection.Vertical
+    layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+    layout.SortOrder = Enum.SortOrder.LayoutOrder
+
+    tab.MouseButton1Click:Connect(function()
+        for _, p in pairs(pages) do p.Visible = false end
+        page.Visible = true
+    end)
+
+    return page
+end
+
+local function createScriptButton(parent, name, callback)
+    local button = Instance.new("TextButton")
+    button.Text = name
+    button.Size = UDim2.new(0.95, 0, 0, 35)
+    button.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+    button.TextColor3 = Color3.fromRGB(255, 255, 255)
+    button.Font = Enum.Font.Gotham
+    button.TextSize = 14
+    button.Parent = parent
+    button.MouseButton1Click:Connect(callback)
+end
+
+local function createToggle(parent, name, default, callback)
+    local holder = Instance.new("Frame")
+    holder.Size = UDim2.new(0.95, 0, 0, 35)
+    holder.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+    holder.BorderSizePixel = 0
+    holder.Parent = parent
+
+    local label = Instance.new("TextLabel")
+    label.Text = name
+    label.Size = UDim2.new(0.6, 0, 1, 0)
+    label.BackgroundTransparency = 1
+    label.TextColor3 = Color3.fromRGB(255, 255, 255)
+    label.Font = Enum.Font.Gotham
+    label.TextSize = 14
+    label.TextXAlignment = Enum.TextXAlignment.Left
+    label.Parent = holder
+
+    local toggle = Instance.new("TextButton")
+    toggle.Size = UDim2.new(0, 40, 0, 20)
+    toggle.Position = UDim2.new(1, -50, 0.5, -10)
+    toggle.BackgroundColor3 = default and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(80, 80, 80)
+    toggle.BorderSizePixel = 0
+    toggle.Text = ""
+    toggle.Parent = holder
+
+    local circle = Instance.new("Frame")
+    circle.Size = UDim2.new(0, 16, 0, 16)
+    circle.Position = default and UDim2.new(0, 22, 0.5, -8) or UDim2.new(0, 2, 0.5, -8)
+    circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    circle.BorderSizePixel = 0
+    circle.Parent = toggle
+
+    Instance.new("UICorner", toggle).CornerRadius = UDim.new(1, 0)
+    Instance.new("UICorner", circle).CornerRadius = UDim.new(1, 0)
+
+    local state = default
+    local function update()
+        toggle.BackgroundColor3 = state and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(80, 80, 80)
+        circle:TweenPosition(state and UDim2.new(0, 22, 0.5, -8) or UDim2.new(0, 2, 0.5, -8), "Out", "Quad", 0.2, true)
+        if callback then callback(state) end
+    end
+
+    toggle.MouseButton1Click:Connect(function()
+        state = not state
+        update()
+    end)
+
+    update()
+end
+
+-- Esp
+local espConnections = {}
+
+local function removeESP(player)
+    if player.Character then
+        local head = player.Character:FindFirstChild("Head")
+        if head then local gui = head:FindFirstChild("ESP_Name") if gui then gui:Destroy() end end
+        local root = player.Character:FindFirstChild("HumanoidRootPart")
+        if root then local box = root:FindFirstChild("ESP_Box") if box then box:Destroy() end end
+    end
+end
+
+local function createESP(player)
+    if player == game.Players.LocalPlayer then return end
+    local function onCharacterAdded(character)
+        if not espEnabled then return end
+        local head = character:WaitForChild("Head", 10)
+        local rootPart = character:WaitForChild("HumanoidRootPart", 10)
+        if head then
+            local billboard = Instance.new("BillboardGui")
+            billboard.Name = "ESP_Name"
+            billboard.Adornee = head
+            billboard.Size = UDim2.new(0, 200, 0, 50)
+            billboard.StudsOffset = Vector3.new(0, 2, 0)
+            billboard.AlwaysOnTop = true
+            local nameLabel = Instance.new("TextLabel")
+            nameLabel.Size = UDim2.new(1, 0, 1, 0)
+            nameLabel.BackgroundTransparency = 1
+            nameLabel.Text = player.Name
+            nameLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+            nameLabel.TextStrokeTransparency = 0.5
+            nameLabel.TextScaled = true
+            nameLabel.Parent = billboard
+            billboard.Parent = head
+        end
+        if rootPart then
+            local box = Instance.new("BoxHandleAdornment")
+            box.Name = "ESP_Box"
+            box.Adornee = rootPart
+            box.Size = Vector3.new(4, 6, 2)
+            box.AlwaysOnTop = true
+            box.ZIndex = 0
+            box.Transparency = 0.7
+            box.Color3 = Color3.new(1, 0, 0)
+            box.Parent = rootPart
+        end
+    end
+    if player.Character then onCharacterAdded(player.Character) end
+    table.insert(espConnections, player.CharacterAdded:Connect(onCharacterAdded))
+end
+
+local function enableESP()
+    for _, p in ipairs(game.Players:GetPlayers()) do createESP(p) end
+    table.insert(espConnections, game.Players.PlayerAdded:Connect(createESP))
+end
+
+local function disableESP()
+    for _, p in ipairs(game.Players:GetPlayers()) do removeESP(p) end
+    for _, conn in ipairs(espConnections) do conn:Disconnect() end
+    espConnections = {}
+end
+
+-- === PAGES ===
+local mainPage = createTab("Main")
+local miscPage = createTab("Misc")
+local settingsPage = createTab("Settings")
+pages["Main"].Visible = true
+
+-- === Main Toggle
+-- Speed
+local speedRow = Instance.new("Frame", mainPage)
+speedRow.Size = UDim2.new(0.95, 0, 0, 35)
+speedRow.Position = UDim2.new(0.025, 0, 0, 45) -- adjust Y as needed
+speedRow.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+speedRow.BorderSizePixel = 0
+
+local rowCorner = Instance.new("UICorner", speedRow)
+rowCorner.CornerRadius = UDim.new(0, 6)
+
+local speedLabel = Instance.new("TextLabel", speedRow)
+speedLabel.Text = "Tốc độ chạy"
+speedLabel.Size = UDim2.new(0.5, 0, 1, 0)
+speedLabel.Position = UDim2.new(0.05, 0, 0, 0)
+speedLabel.BackgroundTransparency = 1
+speedLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+speedLabel.Font = Enum.Font.Gotham
+speedLabel.TextSize = 14
+speedLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+local speedInput = Instance.new("TextBox", speedRow)
+speedInput.Size = UDim2.new(0.4, 0, 0.7, 0)
+speedInput.Position = UDim2.new(0.55, 0, 0.15, 0)
+speedInput.PlaceholderText = "16"
+speedInput.Text = tostring(Players.LocalPlayer.Character and Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid") and Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid").WalkSpeed or 16)
+speedInput.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+speedInput.TextColor3 = Color3.fromRGB(255, 255, 255)
+speedInput.Font = Enum.Font.Gotham
+speedInput.TextSize = 14
+speedInput.ClearTextOnFocus = false
+
+local speedCorner = Instance.new("UICorner", speedInput)
+speedCorner.CornerRadius = UDim.new(0, 6)
+
+speedInput.FocusLost:Connect(function(enterPressed)
+    if enterPressed then
+        local speed = tonumber(speedInput.Text)
+        if speed then
+            local humanoid = Players.LocalPlayer.Character and Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+            if humanoid then
+                humanoid.WalkSpeed = speed
+                StarterGui:SetCore("SendNotification", {
+                    Title = "✅ Đã đổi tốc độ chạy",
+                    Text = "Tốc độ mới: " .. speed,
+                    Duration = 4
+                })
+            end
+        else
+            StarterGui:SetCore("SendNotification", {
+                Title = "❌ Sai",
+                Text = "Vui lòng nhập số ko phải chữ!",
+                Duration = 4
+            })
+        end
+    end
+end)
+
+createToggle(mainPage, "esp người chơi", espEnabled, function(state)
+    espEnabled = state
+    config.esp = state
+    if autoSave then saveData(config) end
+    if state then enableESP() else disableESP() end
+end)
+
+-- === Misc Page
+createScriptButton(miscPage, "Infinite Yield", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+
+-- === Settings Page
+createToggle(settingsPage, "Tự động lưu", autoSave, function(state)
+    autoSave = state
+    config.autoSave = state
+    saveData(config)
+end)
+
+createScriptButton(settingsPage, "Xoá Hack", function()
+    disableESP()
+    gui:Destroy()
+end)
+
+-- Toggle logic
+local function updateToggle()
+    frame.Visible = not frame.Visible
+    toggleButton.BackgroundColor3 = frame.Visible and Color3.fromRGB(0,170,0) or Color3.fromRGB(170,0,0)
+    toggleButton.Text = frame.Visible and "Tắt" or "Bật"
+end
+
+toggleButton.MouseButton1Click:Connect(updateToggle)
+UIS.InputBegan:Connect(function(i, gp)
+    if i.KeyCode == Enum.KeyCode.RightControl and not gp then
+        updateToggle()
+    end
+end)
+
+updateToggle()
+
+-- === Final Load State ===
+if espEnabled then
+    enableESP()
+else
+    disableESP()
+end
+
+StarterGui:SetCore("SendNotification", {
+    Title = "Script Nhà Làm",
+    Text = "Tạo bởi cá",
+    Button1 = "Thank <3",
+    Duration = 5
+})
